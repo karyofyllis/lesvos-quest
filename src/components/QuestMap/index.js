@@ -24,10 +24,9 @@ const spots = [
 function QuestMap() {
   return (
     <MapContainer
-      center={{ lat: 51.505, lng: -0.09 }}
+      center={{ lat: 39.321402, lng: 26.332261 }}
       style={{ width: "100%", height: "100%" }}
-      zoom={4}
-      scrollWheelZoom={false}
+      zoom={7}
     >
       <TileLayer
         attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
