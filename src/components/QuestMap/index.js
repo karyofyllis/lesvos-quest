@@ -26,6 +26,7 @@ function QuestMap() {
     <MapContainer
       center={{ lat: 39.321402, lng: 26.332261 }}
       style={{ width: "100%", height: "100%" }}
+      zoomControl={false}
       zoom={7}
     >
       <TileLayer
