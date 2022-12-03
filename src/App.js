@@ -10,10 +10,10 @@ import {useEffect} from "react";
 
 function App() {
   const [play] = useSound(track);
-
-  useEffect(() => {
-    play()
-  }, [play])
+  //
+  // useEffect(() => {
+  //   play()
+  // }, [play])
 
   return (
     <Box>
@@ -21,7 +21,7 @@ function App() {
       <Box sx={{ height: "100vh", width: "100%" }}>
         <Navigation/>
         <QuestMap />
-        <Box style={{position:'fixed',left:0,top:20,zIndex:999}}>
+        <Box style={{position:'fixed',left:0,top:50,zIndex:999}}>
           <OptionsMenu/>
         </Box>
         <Box style={{ position: "fixed", top: 30, right: 0, zIndex: 999 }}>
