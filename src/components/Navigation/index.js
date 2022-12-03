@@ -1,6 +1,7 @@
-import { Button, Stack } from "@mui/material";
+import {Box, Button, Stack} from "@mui/material";
 import PlayBtn from '../../assets/icons/playBtn.png'
 import PauseBtn from '../../assets/icons/pauseBtn.png'
+import GameLogo from '../../assets/images/logo.png'
 
 function Navigation({ isPlaying, togglePlayer }) {
   return (
@@ -14,23 +15,25 @@ function Navigation({ isPlaying, togglePlayer }) {
         boxShadow: 4,
       }}
     >
-      <img
-        src={require("../../assets/images/navigation.png")}
-        style={{ width: " 100%", height: 50, objectFit: "fill" }}
-        alt={"navigation"}
-      />
-
+      <img src ={require("../../assets/images/navigation.png")} style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover'
+      }}/>
       <Stack
         px={2}
         flexDirection={"row"} justifyContent={"flex-end"} alignItems={'center'}
-        style={{ marginTop: -45 }}
+        style={{ marginTop: 0 }}
         sx={{
           width: "100%",
           zIndex: 1000,
           height: 50,
         }}
       >
-        <div style={{cursor:'pointer'}} onClick={togglePlayer}>
+        <Box style={{margin:'0 auto',marginTop:-20}}>
+          <img src={GameLogo} height={120}/>
+        </Box>
+        <div style={{cursor:'pointer',marginTop:-92}} onClick={togglePlayer}>
           <img width={40} height={40} src={isPlaying?PauseBtn:PlayBtn}/>
         </div>
       </Stack>

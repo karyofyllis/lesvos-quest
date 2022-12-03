@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Lesvos Quest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Γίνε κυρίαρχος της πόλης! Χτίσε την αυτοκρατορία σου
 
-## Available Scripts
+Το [Lesvos Quest](https://lesvos.cityquest.gr) είναι ένα παιχνίδι σοβαρού σκοπού για την προώθηση του πολιτιστικού αποθέματος της νήσου Λέσβου. Ο σκοπός του παιχνιδιού είναι εκπαιδευτικός και ψυχαγωγικός. Απευθύνεται στην εκπαιδευτική κοινότητα και σε όσους θέλουν να ανακαλύψουν τους κρυμμένους πολιτιστικούς θησαυρούς μιας περιοχής. Το παιχνίδι είναι διαδικτυακό και ο παίκτης μπορεί να παίξει είτε μόνος του είτε με άλλους παίκτες παράλληλα. Στην σόλο εκδοχή ο παίκτης εξερευνά τα σημεία ενδιαφέροντος μιας πόλης και παίρνει μέρος σε ατομικές δοκιμασίες (π.χ.  ερωτήσεις γνώσεων, φωτογράφηση μνημείων, check-ins). Στην ομαδική εκδοχή ο παίκτης συμμετέχει σε ανταγωνιστικές δοκιμασίες με αλλους παίκτες διαδικτυακά και ανταγωνίζεται για την κατάκτηση σημείων ενδιαφέροντος. Και στις δυο εκδοχές ο παίκτης συγκεντρώνει credits τα οποία μπορεί να εξαργυρώσει για να ξεκλειδώσει έξτρα χαρακτηριστικά του παιχνιδιού ή σε προσφορές για θεάματα και πολιτιστικά δρώμενα της πόλης (π.χ. σινεμά, θέατρο).  Για την αποτελεσματικότερη προώθηση το πολιτιστικού προϊόντος της πόλης, τα επιτεύγματα ενός παίκτη θα διαχέονται και στα μέσα κοινωνικής δικτύωσης. Τα σημεία ενδιαφέροντος που προωθούνται στα πλαίσια του παιχνιδιού μπορούν να αντλούνται είτε από ανοιχτές πηγές δεδομένων (π.χ. [Εθνικό Αρχείο Μνημείων](https://www.arxaiologikoktimatologio.gov.gr/)) ή να δημιουργούνται αποκλειστικά για τις ανάγκες του παιχνιδιού.
 
-In the project directory, you can run:
+Η ιδέα του παιχνιδιού αναπτύχθηκε στα πλαίσα στου [Culture4Aegean](https://crowdhackathon.com/culture4aegean/) bootcamp.
 
-### `npm start`
+## Game Design
++++
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Ανοιχτά Δεδομένα
+- [Εθνικό Αρχείο Μνημείων](https://www.arxaiologikoktimatologio.gov.gr/)
+- [Δήμος Δυτικής Λέσβου](https://www.mwlesvos.gr/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Contributors
+- Giorgos Kariofyllis ([LinkedIn](https://www.linkedin.com/in/giorgos-k-4699b0108/)) - ([GitHub](https://github.com/karyofyllis))
+- Manolis Makris ([LinkedIn](https://www.linkedin.com/in/manolis-makris-1975b753/)) - ([GitHub](https://github.com/emmakris))
+- Niki Kyriakou ([LinkedIn](https://www.linkedin.com/in/nkyriakou/))
+- Vangelis Nomikos ([LinkedIn](https://www.linkedin.com/in/vangelis-nomikos-a7ab902b/)) - ([GitHub](https://github.com/nvangelis))
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## More Info
+- [Facebook Page](https://www.facebook.com/profile.php?id=100088437397742)
