@@ -30,29 +30,28 @@
               "correct": false
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "Q-01-02",
-      "poiId": "POI-01",
-      "label": "Το Απολιθωμένο Δάσος της Ερεσού είναι διατηρητέο μνημείο της φύσης από το:",
-      "options": [
-        {
-          "value": "1985",
-          "correct": true
-        },
-        {
-          "value": "1986",
-          "correct": false
-        },
-        {
-          "value": "1987",
-          "correct": false
-        },
-        {
-          "value": "1988",
-          "correct": false
+        }, {
+          "id": "Q-01-02",
+          "poiId": "POI-01",
+          "label": "Το Απολιθωμένο Δάσος της Ερεσού είναι διατηρητέο μνημείο της φύσης από το:",
+          "options": [
+            {
+              "value": "1985",
+              "correct": true
+            },
+            {
+              "value": "1986",
+              "correct": false
+            },
+            {
+              "value": "1987",
+              "correct": false
+            },
+            {
+              "value": "1988",
+              "correct": false
+            }
+          ]
         }
       ]
     },

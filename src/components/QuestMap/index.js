@@ -1,9 +1,11 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 import L from "leaflet";
-import {Stack} from "@mui/material";
 import LocationPopup from "../LocationPopup";
 import data from '../../data/data.json'
+import {Fragment, useState} from "react";
+import QuizDialog from "../QuizDialog";
+import {Typography} from "@mui/material";
 
 const defaultMarker = new L.icon({
   iconUrl: require("../../assets/building.png"),
@@ -23,18 +25,12 @@ const tavernMarker = new L.icon({
   iconAnchor: [13, 0]
 });
 
+const corpMarker = new L.icon({
+  iconUrl: require("../../assets/images/17.png"),
+  iconSize: [25, 41],
+  iconAnchor: [13, 0]
+});
 
-const spots = [
-  {
-    location: [39.321402, 26.332261],
-  },
-  {
-    location: [39.106138, 26.549872],
-  },
-  {
-    location: [39.151624, 25.969304],
-  },
-];
 
 const diamonds = [
   {
@@ -52,7 +48,21 @@ const taverns = [
 ]
 
 function QuestMap() {
+
+  const [openQuiz, setOpenQuiz] = useState(false)
+  const [quiz, setQuiz] = useState({
+    questions: []
+  })
+
+  const handleBattle = () => {
+    setOpenQuiz(true)
+    setQuiz({
+      questions: data.questions
+    })
+  }
+
   return (
+    <Fragment>
     <MapContainer
       center={{ lat: 39.321402, lng: 26.332261 }}
       style={{ width: "100%", height: "100%" }}
@@ -66,10 +76,19 @@ function QuestMap() {
       />
       {/*<LocationMarker />*/}
       {
-        data.pois.map(poi => (
+        data.monuments.map(poi => (
           <Marker position={[poi.location.latitude, poi.location.longitude]} icon={defaultMarker}>
             <Popup className="request-popup">
-              <LocationPopup poi={poi} />
+              <LocationPopup poi={poi} onBattle={handleBattle}/>
+            </Popup>
+          </Marker>
+        ))
+      }
+      {
+        data.corporations.map(poi => (
+          <Marker position={[poi.location.latitude, poi.location.longitude]} icon={corpMarker}>
+            <Popup>
+              <Typography>{poi.label}</Typography>
             </Popup>
           </Marker>
         ))
@@ -89,6 +108,8 @@ function QuestMap() {
         </Marker>
       ))}
     </MapContainer>
+      <QuizDialog open={openQuiz} handleClose={() => setQuiz(false)} quiz={quiz} />
+    </Fragment>
   );
 }
 

@@ -12,7 +12,7 @@ const Symbol = styled("div")(() => ({
 	justifyContent: "center"
 }))
 
-function LocationPopup({ poi }) {
+function LocationPopup({ poi, handleBattle }) {
 
 	return (
 		<Stack style={{ width: 200 }} mb={6}>
@@ -52,7 +52,7 @@ function LocationPopup({ poi }) {
 				</Stack>
 
 				<div style={{ flex: 1 }}/>
-				<ButtonBased image={"fightButton.png"}/>
+				<ButtonBased image={"fightButton.png"} onClick={handleBattle}/>
 				<ButtonBased image={"dennyButton.png"}/>
 			</Stack>
 		</Stack>

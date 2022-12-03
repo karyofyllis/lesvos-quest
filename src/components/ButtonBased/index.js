@@ -8,10 +8,10 @@ const StyledButton = styled(CardActionArea)(() => ({
 
 function ButtonBased(props) {
 
-	const { image }  = props
+	const { image, onClick }  = props
 
 	return (
-		<StyledButton disableRipple>
+		<StyledButton disableRipple onClick={onClick}>
 			<img src={require(`../../assets/images/${image}`)} alt={""} width={180}/>
 		</StyledButton>
 	)
