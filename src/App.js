@@ -1,15 +1,16 @@
+import logo from './logo.svg';
 import './App.css';
-import QuestMap from "./components/QuestMap";
-import {Box, CssBaseline} from "@mui/material";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Playground from "./pages/playground";
+
 
 function App() {
   return (
-    <Box>
-      <CssBaseline/>
-      <Box sx={{ height: "100vh", width: "100%"}}>
-        <QuestMap/>
-      </Box>
-    </Box>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/playground" element={<Playground />}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
