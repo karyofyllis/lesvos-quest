@@ -1,6 +1,7 @@
 import {Box, Stack, Typography} from "@mui/material";
 import AvatarImage from '../../assets/images/avatar.png'
 import MapImage from '../../assets/icons/mapClosed.png'
+import NewBattleImage from '../../assets/images/newBattleButton.png'
 
 const Avatar = ({nickName='Tzimani',location='Mutilini',conquers=15}) => {
   return <Box flex alignItems={'center'} style={{width: 250, minHeight: 300, height: 'auto'}}>
@@ -15,6 +16,9 @@ const Avatar = ({nickName='Tzimani',location='Mutilini',conquers=15}) => {
           <Typography fontFamily={'gameFont'} color={'white'}>{conquers} Kατακτήσεις</Typography>
         </Stack>
       </Stack>
+    </Box>
+    <Box ml={2.5} mt={-0.5}>
+      <img style={{cursor:'pointer'}} src={NewBattleImage} height={45}/>
     </Box>
   </Box>
 }
