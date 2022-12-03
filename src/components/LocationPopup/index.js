@@ -36,8 +36,8 @@ function LocationPopup({ poi, handleBattle }) {
 						<img src={require("../../assets/images/12.png")} width={24} height={24}/>
 					</Symbol>
 					<Stack direction={"column"} alignItems={"flex-start"}>
-						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 12 }}>Έχει κατακτηθεί</Typography>
-						<Typography sx={{ fontSize: 12 }}><b>8 Φορές</b></Typography>
+						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 16,fontFamily:'gameFont',fontWeight:'bolder'}}>Έχει κατακτηθεί</Typography>
+						<Typography sx={{ fontSize: 14,fontFamily:'gameFont',fontWeight:'400' }}><b>8 Φορές</b></Typography>
 					</Stack>
 				</Stack>
 
@@ -46,14 +46,15 @@ function LocationPopup({ poi, handleBattle }) {
 						<img src={require("../../assets/building.png")} width={30} height={30}/>
 					</Symbol>
 					<Stack direction={"column"} alignItems={"flex-start"}>
-						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 16,fontFamily:'gameFont' }}>Ανήκει στον</Typography>
-						<Typography sx={{ fontSize: 14,fontFamily:'gameFont' }}><b>Pouthenas13</b></Typography>
+						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 16,fontFamily:'gameFont',fontWeight:'bolder'}}>Ανήκει στον</Typography>
+						<Typography sx={{ fontSize: 14,fontFamily:'gameFont',fontWeight:'400' }}><b>Pouthenas13</b></Typography>
 					</Stack>
 				</Stack>
 
-				<div style={{ flex: 1 }}/>
+				<div style={{ marginLeft:12,alignItems:'center',alignContent:'center',display:'flex', flexDirection:'column'}}>
 				<ButtonBased image={"fightButton.png"} onClick={handleBattle}/>
 				<ButtonBased image={"dennyButton.png"}/>
+				</div>
 			</Stack>
 		</Stack>
 	)

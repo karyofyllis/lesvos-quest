@@ -12,7 +12,7 @@ function ButtonBased(props) {
 
 	return (
 		<StyledButton disableRipple onClick={onClick}>
-			<img src={require(`../../assets/images/${image}`)} alt={""} width={180}/>
+			<img src={require(`../../assets/images/${image}`)} alt={""} width={160}/>
 		</StyledButton>
 	)
 }
