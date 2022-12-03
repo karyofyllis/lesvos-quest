@@ -1,7 +1,9 @@
-import {Box, Button, Stack} from "@mui/material";
+import {Box, IconButton, Stack} from "@mui/material";
 import PlayBtn from '../../assets/icons/playBtn.png'
 import PauseBtn from '../../assets/icons/pauseBtn.png'
 import GameLogo from '../../assets/images/logo.png'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Navigation({ isPlaying, togglePlayer }) {
   return (
@@ -33,6 +35,15 @@ function Navigation({ isPlaying, togglePlayer }) {
         <Box style={{margin:'0 auto',marginTop:-20}}>
           <img src={GameLogo} height={120}/>
         </Box>
+
+        <Stack direction={"row"} alignItems={"center"} style={{ marginTop: -100}} columnGap={1} mr={2 }>
+          <IconButton component={"a"} href={"https://www.facebook.com/profile.php?id=100088437397742"} target={"_blank"}>
+            <FacebookIcon/>
+          </IconButton>
+          <IconButton component={"a"} href={"https://github.com/karyofyllis/lesvos-quest"} target={"_blank"}>
+            <GitHubIcon/>
+          </IconButton>
+        </Stack>
         <div style={{cursor:'pointer',marginTop:-92}} onClick={togglePlayer}>
           <img width={40} height={40} src={isPlaying?PauseBtn:PlayBtn}/>
         </div>
