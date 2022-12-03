@@ -1,4 +1,6 @@
 import { Button, Stack } from "@mui/material";
+import PlayBtn from '../../assets/icons/playBtn.png'
+import PauseBtn from '../../assets/icons/pauseBtn.png'
 
 function Navigation({ isPlaying, togglePlayer }) {
   return (
@@ -21,17 +23,16 @@ function Navigation({ isPlaying, togglePlayer }) {
       <Stack
         px={2}
         flexDirection={"row"} justifyContent={"flex-end"} alignItems={'center'}
-        style={{ marginTop: -50 }}
+        style={{ marginTop: -45 }}
         sx={{
           width: "100%",
           zIndex: 1000,
           height: 50,
         }}
       >
-	      {/* ELEMENTS GO HERE*/}
-        <Button size={"small"} variant={"contained"} onClick={togglePlayer}>
-          {isPlaying ? "Pause" : "Play"}
-        </Button>
+        <div style={{cursor:'pointer'}} onClick={togglePlayer}>
+          <img width={40} height={40} src={isPlaying?PauseBtn:PlayBtn}/>
+        </div>
       </Stack>
     </Stack>
   );
