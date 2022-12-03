@@ -7,16 +7,16 @@ import Navigation from "./components/Navigation";
 import useSound from "use-sound";
 import track from "./assets/audio/desert.mp3";
 import {useState} from "react";
-import Snowfall from 'react-snowfall'
+// import Snowfall from 'react-snowfall'
 
 function App() {
   const [play, exposer] = useSound(track);
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
 
   const togglePlayer = () => {
     if (isPlaying) {
       setIsPlaying(false)
-      exposer.stop()
+      exposer.pause()
     } else {
       setIsPlaying(true)
       play()
@@ -36,7 +36,7 @@ function App() {
           <Avatar />
         </Box>
       </Box>
-      <Snowfall style={{ zIndex: 999 }}/>
+      {/*<Snowfall style={{ zIndex: 999 }}/>*/}
     </Box>
   );
 }
