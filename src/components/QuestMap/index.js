@@ -5,7 +5,8 @@ import LocationPopup from "../LocationPopup";
 import data from '../../data/data.json'
 import {Fragment, useState} from "react";
 import QuizDialog from "../QuizDialog";
-import {Typography} from "@mui/material";
+import CorporationPopup from "../CorporationPopup";
+import ContributorPopup from "../ContributorPopup";
 
 const defaultMarker = new L.icon({
   iconUrl: require("../../assets/building.png"),
@@ -32,6 +33,13 @@ const corpMarker = new L.icon({
 });
 
 
+const contributorMarker = new L.icon({
+  iconUrl: require("../../assets/images/49.png"),
+  iconSize: 36,
+  iconAnchor: [13, 0]
+});
+
+
 const diamonds = [
   {
     location: [39.901635, 25.158952],
@@ -50,15 +58,13 @@ const taverns = [
 function QuestMap() {
 
   const [openQuiz, setOpenQuiz] = useState(false)
-  const [quiz, setQuiz] = useState({
+  const [monument, setMonument] = useState({
     questions: []
   })
 
-  const handleBattle = () => {
+  const handleBattle = (monument) => {
     setOpenQuiz(true)
-    setQuiz({
-      questions: data.questions
-    })
+    setMonument(monument)
   }
 
   return (
@@ -79,7 +85,7 @@ function QuestMap() {
         data.monuments.map(poi => (
           <Marker position={[poi.location.latitude, poi.location.longitude]} icon={defaultMarker}>
             <Popup className="request-popup">
-              <LocationPopup poi={poi} onBattle={handleBattle}/>
+              <LocationPopup poi={poi} onBattle={() => handleBattle(poi)}/>
             </Popup>
           </Marker>
         ))
@@ -87,8 +93,17 @@ function QuestMap() {
       {
         data.corporations.map(poi => (
           <Marker position={[poi.location.latitude, poi.location.longitude]} icon={corpMarker}>
-            <Popup>
-              <Typography>{poi.label}</Typography>
+            <Popup className="request-popup">
+              <CorporationPopup poi={poi} />
+            </Popup>
+          </Marker>
+        ))
+      }
+      {
+        data.contributors.map(poi => (
+          <Marker position={[poi.location.latitude, poi.location.longitude]} icon={contributorMarker}>
+            <Popup className="request-popup">
+              <ContributorPopup poi={poi} />
             </Popup>
           </Marker>
         ))
@@ -108,7 +123,7 @@ function QuestMap() {
         </Marker>
       ))}
     </MapContainer>
-      <QuizDialog open={openQuiz} handleClose={() => setQuiz(false)} quiz={quiz} />
+      <QuizDialog open={openQuiz} handleClose={() => setOpenQuiz(false)} monument={monument} />
     </Fragment>
   );
 }

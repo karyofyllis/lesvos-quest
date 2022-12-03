@@ -12,21 +12,21 @@ const Symbol = styled("div")(() => ({
 	justifyContent: "center"
 }))
 
-function LocationPopup({ poi, handleBattle }) {
+function LocationPopup({ poi, onBattle }) {
 
 	return (
 		<Stack style={{ width: 200 }} mb={6}>
 			<Stack direction={"column"} alignItems={"center"} style={{ width: 200 }}>
 				<img width={280} src={require("../../assets/images/papurousHeader.png")} alt={""}/>
-				<img width={230}  style={{ marginTop: -50, marginBottom: -50 }} src={require("../../assets/images/papurousContent.png")} alt={""}/>
+				<img width={230}  style={{ marginTop: -40, marginBottom: -50 }} src={require("../../assets/images/papurousContent.png")} alt={""}/>
 				<img width={280}  src={require("../../assets/images/papurousFooter.png")} alt={""}/>
 			</Stack>
 
-			<Stack style={{ marginTop: -370, height: 300, objectFit: "cover" }} ml={0.5}>
-				<Box sx={{ boxShadow: 10, width: 190 }}>
+			<Stack style={{ marginTop: -380, height: 310, objectFit: "cover" }} ml={0.5}>
+				<Box sx={{ width: 190 }}>
 					<img src={poi.imageUrl} style={{ width: 190, height: 100, objectFit: "cover", marginBottom: -5 }}/>
 
-					<Stack sx={{ backgroundColor: "#ad3c17"}} p={1}>
+					<Stack sx={{ backgroundColor: "#ad3c17", borderBottomRightRadius: 10, borderBottomLeftRadius: 10 }} p={1}>
 						<Typography variant={"body1"} color={"white"} sx={{ fontSize: 12 }}>{poi.label}</Typography>
 					</Stack>
 				</Box>
@@ -52,7 +52,7 @@ function LocationPopup({ poi, handleBattle }) {
 				</Stack>
 
 				<div style={{ marginLeft:12,alignItems:'center',alignContent:'center',display:'flex', flexDirection:'column'}}>
-				<ButtonBased image={"fightButton.png"} onClick={handleBattle}/>
+				<ButtonBased image={"fightButton.png"} onClick={onBattle} />
 				<ButtonBased image={"dennyButton.png"}/>
 				</div>
 			</Stack>

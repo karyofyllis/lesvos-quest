@@ -6,20 +6,26 @@ import OptionsMenu from "./components/GUI/OptionsMenu";
 import Navigation from "./components/Navigation";
 import useSound from "use-sound";
 import track from "./assets/audio/desert.mp3";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 // import Snowfall from 'react-snowfall'
 
 function App() {
   const [play, exposer] = useSound(track);
   const [isPlaying, setIsPlaying] = useState(true)
 
+  useEffect(() => {
+    if (isPlaying) {
+      play()
+    } else {
+      exposer.pause()
+    }
+  }, [exposer, isPlaying, play])
+
   const togglePlayer = () => {
     if (isPlaying) {
       setIsPlaying(false)
-      exposer.pause()
     } else {
       setIsPlaying(true)
-      play()
     }
   }
 
