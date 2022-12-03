@@ -8,6 +8,10 @@
         "latitude": "39.219009677632904",
         "longitude": "25.92212757528319"
       },
+      "images" : [{
+        "caption": "",
+        "url" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Versteend_hout.jpg/1920px-Versteend_hout.jpg"
+      }],
       "externalLinks": [
         {
           "label": "Εθνικό Αρχείο Μνημείων",
