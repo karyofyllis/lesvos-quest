@@ -12,7 +12,7 @@ const Avatar = ({nickName='Tzimani',location='Mutilini',conquers=15}) => {
         <Typography color={'#ccd33a'} fontFamily={'gameFont'} fontWeight={'600'}>{location}</Typography>
         <Stack direction={'row'} mt={4} alignItems={'center'} spacing={2}>
           <img src={MapImage} height={15} width={15}/>
-          <Typography fontFamily={'gameFont'} color={'white'}>15 {conquers}</Typography>
+          <Typography fontFamily={'gameFont'} color={'white'}>{conquers} Kατακτήσεις</Typography>
         </Stack>
       </Stack>
     </Box>
