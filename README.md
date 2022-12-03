@@ -23,9 +23,7 @@
 - Μανόλης Μακρής ([LinkedIn](https://www.linkedin.com/in/manolis-makris-1975b753/)) - ([GitHub](https://github.com/emmakris))
 - Νίκη Κυριακού ([LinkedIn](https://www.linkedin.com/in/nkyriakou/))
 
-## Έρχονται...
-- AegeanQuest 
-- GreeceQuest
-- WorldQuest
+## Scaling up...
+- AegeanQuest => GreeceQuest => WorldQuest
  
 
