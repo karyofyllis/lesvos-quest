@@ -8,6 +8,18 @@ const defaultMarker = new L.icon({
   iconAnchor: [13, 0]
 });
 
+const diamondMarker = new L.icon({
+  iconUrl: require("../../assets/images/8.png"),
+  iconSize: [25, 41],
+  iconAnchor: [13, 0]
+});
+
+const tavernMarker = new L.icon({
+  iconUrl: require("../../assets/images/31.png"),
+  iconSize: [25, 41],
+  iconAnchor: [13, 0]
+});
+
 
 const spots = [
   {
@@ -20,6 +32,21 @@ const spots = [
     location: [39.151624, 25.969304],
   },
 ];
+
+const diamonds = [
+  {
+    location: [39.901635, 25.158952],
+  },
+  {
+    location: [38.562772, 25.937547],
+  },
+]
+
+const taverns = [
+  {
+    location: [39.508801, 25.004888],
+  },
+]
 
 function QuestMap() {
   return (
@@ -37,6 +64,20 @@ function QuestMap() {
       {/*<LocationMarker />*/}
       {spots.map((spot) => (
         <Marker position={spot.location} icon={defaultMarker}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      ))}
+      {diamonds.map((spot) => (
+        <Marker position={spot.location} icon={diamondMarker}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      ))}
+      {taverns.map((spot) => (
+        <Marker position={spot.location} icon={tavernMarker}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
