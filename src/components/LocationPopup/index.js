@@ -43,11 +43,11 @@ function LocationPopup({ poi, handleBattle }) {
 
 				<Stack columnGap={1} mt={1} direction={"row"} alignItems={"flex-start"} mb={1}>
 					<Symbol>
-						<img src={require("../../assets/building.png")} width={24} height={24}/>
+						<img src={require("../../assets/building.png")} width={30} height={30}/>
 					</Symbol>
 					<Stack direction={"column"} alignItems={"flex-start"}>
-						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 12 }}>Ανήκει στον</Typography>
-						<Typography sx={{ fontSize: 12 }}><b>Pouthenas13</b></Typography>
+						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 16,fontFamily:'gameFont' }}>Ανήκει στον</Typography>
+						<Typography sx={{ fontSize: 14,fontFamily:'gameFont' }}><b>Pouthenas13</b></Typography>
 					</Stack>
 				</Stack>
 
