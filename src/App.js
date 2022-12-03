@@ -6,20 +6,27 @@ import OptionsMenu from "./components/GUI/OptionsMenu";
 import Navigation from "./components/Navigation";
 import useSound from "use-sound";
 import track from "./assets/audio/desert.mp3";
-import {useEffect} from "react";
+import {useState} from "react";
 
 function App() {
-  const [play] = useSound(track);
-  //
-  // useEffect(() => {
-  //   play()
-  // }, [play])
+  const [play, exposer] = useSound(track);
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  const togglePlayer = () => {
+    if (isPlaying) {
+      setIsPlaying(false)
+      exposer.stop()
+    } else {
+      setIsPlaying(true)
+      play()
+    }
+  }
 
   return (
     <Box>
       <CssBaseline />
       <Box sx={{ height: "100vh", width: "100%" }}>
-        <Navigation/>
+        <Navigation togglePlayer={togglePlayer} isPlaying={isPlaying} />
         <QuestMap />
         <Box style={{position:'fixed',left:0,top:50,zIndex:999}}>
           <OptionsMenu/>
