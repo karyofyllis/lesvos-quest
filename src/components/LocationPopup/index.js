@@ -5,8 +5,8 @@ const Symbol = styled("div")(() => ({
 	borderRadius: "50%",
 	backgroundColor: "#1a404d",
 	border: "2px solid #52410d",
-	width: 40,
-	height: 40,
+	width: 36,
+	height: 36,
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center"
@@ -15,40 +15,39 @@ const Symbol = styled("div")(() => ({
 function LocationPopup({ poi }) {
 
 	return (
-		<Stack style={{ width: 280 }}>
-			<Stack direction={"column"} alignItems={"center"}>
-				<img src={require("../../assets/images/papurousHeader.png")} alt={""}/>
-				<img style={{ marginTop: -50, marginBottom: -50 }} src={require("../../assets/images/papurousContent.png")} alt={""}/>
-				<img src={require("../../assets/images/papurousFooter.png")} alt={""}/>
+		<Stack style={{ width: 200 }} mb={6}>
+			<Stack direction={"column"} alignItems={"center"} style={{ width: 200 }}>
+				<img width={280} src={require("../../assets/images/papurousHeader.png")} alt={""}/>
+				<img width={230}  style={{ marginTop: -50, marginBottom: -50 }} src={require("../../assets/images/papurousContent.png")} alt={""}/>
+				<img width={280}  src={require("../../assets/images/papurousFooter.png")} alt={""}/>
 			</Stack>
 
-			<Stack rowGap={1} style={{ marginTop: -700, height: 600, objectFit: "cover" }}>
-				<Box sx={{ boxShadow: 10 }}>
-					<img src={poi.imageUrl} style={{ width: "100%", height: 200, objectFit: "cover", marginBottom: -5 }}/>
+			<Stack style={{ marginTop: -370, height: 300, objectFit: "cover" }} ml={0.5}>
+				<Box sx={{ boxShadow: 10, width: 190 }}>
+					<img src={poi.imageUrl} style={{ width: 190, height: 100, objectFit: "cover", marginBottom: -5 }}/>
 
 					<Stack sx={{ backgroundColor: "#ad3c17"}} p={1}>
-						<Typography variant={"h6"} color={"white"}>{poi.label}</Typography>
+						<Typography variant={"body1"} color={"white"} sx={{ fontSize: 12 }}>{poi.label}</Typography>
 					</Stack>
 				</Box>
 
-
-				<Stack columnGap={1} mt={2} direction={"row"} alignItems={"flex-start"}>
+				<Stack columnGap={1} mt={1} direction={"row"} alignItems={"flex-start"}>
 					<Symbol>
 						<img src={require("../../assets/images/12.png")} width={24} height={24}/>
 					</Symbol>
 					<Stack direction={"column"} alignItems={"flex-start"}>
-						<Typography variant={"h6"} sx={{ color: "#ad3c17"}}>Έχει κατακτηθεί</Typography>
-						<Typography><b>8 Φορές</b></Typography>
+						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 12 }}>Έχει κατακτηθεί</Typography>
+						<Typography sx={{ fontSize: 12 }}><b>8 Φορές</b></Typography>
 					</Stack>
 				</Stack>
 
-				<Stack columnGap={1} mt={2} direction={"row"} alignItems={"flex-start"}>
+				<Stack columnGap={1} mt={1} direction={"row"} alignItems={"flex-start"} mb={1}>
 					<Symbol>
 						<img src={require("../../assets/building.png")} width={24} height={24}/>
 					</Symbol>
 					<Stack direction={"column"} alignItems={"flex-start"}>
-						<Typography variant={"h6"} sx={{ color: "#ad3c17"}}>Ανήκει στον</Typography>
-						<Typography><b>Pouthenas13</b></Typography>
+						<Typography variant={"h6"} sx={{ color: "#ad3c17", fontSize: 12 }}>Ανήκει στον</Typography>
+						<Typography sx={{ fontSize: 12 }}><b>Pouthenas13</b></Typography>
 					</Stack>
 				</Stack>
 
