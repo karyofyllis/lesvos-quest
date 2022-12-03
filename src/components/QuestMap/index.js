@@ -1,6 +1,9 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 import L from "leaflet";
+import {Stack} from "@mui/material";
+import LocationPopup from "../LocationPopup";
+import data from '../../data/data.json'
 
 const defaultMarker = new L.icon({
   iconUrl: require("../../assets/building.png"),
@@ -62,13 +65,15 @@ function QuestMap() {
         ext={"jpg"}
       />
       {/*<LocationMarker />*/}
-      {spots.map((spot) => (
-        <Marker position={spot.location} icon={defaultMarker}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      ))}
+      {
+        data.pois.map(poi => (
+          <Marker position={[poi.location.latitude, poi.location.longitude]} icon={defaultMarker}>
+            <Popup className="request-popup">
+              <LocationPopup poi={poi} />
+            </Popup>
+          </Marker>
+        ))
+      }
       {diamonds.map((spot) => (
         <Marker position={spot.location} icon={diamondMarker}>
           <Popup>
