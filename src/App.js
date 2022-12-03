@@ -28,7 +28,7 @@ function App() {
       <Box sx={{ height: "100vh", width: "100%" }}>
         <Navigation togglePlayer={togglePlayer} isPlaying={isPlaying} />
         <QuestMap />
-        <Box style={{position:'fixed',left:0,top:50,zIndex:999}}>
+        <Box style={{position:'fixed',left:0,top:49,zIndex:999}}>
           <OptionsMenu/>
         </Box>
         <Box style={{ position: "fixed", top: 60, right: -60, zIndex: 999 }}>
