@@ -31,7 +31,7 @@ function App() {
         <Box style={{position:'fixed',left:0,top:50,zIndex:999}}>
           <OptionsMenu/>
         </Box>
-        <Box style={{ position: "fixed", top: 30, right: 0, zIndex: 999 }}>
+        <Box style={{ position: "fixed", top: 60, right: -60, zIndex: 999 }}>
           <Avatar />
         </Box>
       </Box>
