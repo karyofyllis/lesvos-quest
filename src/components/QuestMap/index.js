@@ -2,17 +2,12 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 import L from "leaflet";
 
-const iconPerson = new L.Icon({
+const defaultMarker = new L.icon({
   iconUrl: require("../../assets/building.png"),
-  iconRetinaUrl: require('../../assets/building.png'),
-  iconAnchor: null,
-  popupAnchor: null,
-  shadowUrl: null,
-  shadowSize: null,
-  shadowAnchor: null,
-  iconSize: new L.Point(36, 36),
-  // className: 'leaflet-div-icon'
+  iconSize: [25, 41],
+  iconAnchor: [13, 0]
 });
+
 
 const spots = [
   {
@@ -41,7 +36,7 @@ function QuestMap() {
       />
       {/*<LocationMarker />*/}
       {spots.map((spot) => (
-        <Marker position={spot.location} icon={iconPerson}>
+        <Marker position={spot.location} icon={defaultMarker}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
