@@ -9,6 +9,7 @@
         "longitude": "25.92212757528319"
       },
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Versteend_hout.jpg/1920px-Versteend_hout.jpg",
+      "videoUrl": "",
       "externalLinks": [
         {
           "label": "Εθνικό Αρχείο Μνημείων",
@@ -30,7 +31,8 @@
               "correct": false
             }
           ]
-        }, {
+        },
+        {
           "id": "Q-01-02",
           "poiId": "POI-01",
           "label": "Το Απολιθωμένο Δάσος της Ερεσού είναι διατηρητέο μνημείο της φύσης από το:",
@@ -56,6 +58,67 @@
       ]
     },
     {
+      "id": "POI-06",
+      "label": "Γέφυρα Εννιά Καμάρες",
+      "description": "",
+      "location": {
+        "latitude": "39.2110623990098",
+        "longitude": "26.196435414506137"
+      },
+      "imageUrl": "",
+      "videoUrl": "https://www.youtube.com/watch?v=VFjdOWVJqzY",
+      "externalLinks": [
+        {
+          "label": "Περισσότερα",
+          "url": "https://www.arxaiologikoktimatologio.gov.gr/el/monuments_info?id=152767&type=Monument"
+        }
+      ],
+      "questions": [
+        {
+          "id": "Q-06-01",
+          "poiId": "POI-06",
+          "label": "Πέτρινο εννεάτοξο γεφύρι που γεφυρώνει το ρέμα το οποίο κατεβαίνει:",
+          "options": [
+            {
+              "value": "απο την περιοχή \"Ερμοτίλια\" και χύνεται στη σκάλα Καλλονής.",
+              "correct": true
+            },
+            {
+              "value": "απο την περιοχή \"Καλλονής\" και χύνεται στη σκάλα Ερμοτίλιας",
+              "correct": false
+            },
+            {
+              "value": "απο την περιοχή \"Σίγρι\" και χύνεται στη σκάλα Ερεσσού.",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "Q-06-02",
+          "poiId": "POI-06",
+          "label": "",
+          "options": [
+            {
+              "value": "",
+              "correct": true
+            },
+            {
+              "value": "",
+              "correct": false
+            },
+            {
+              "value": "",
+              "correct": false
+            },
+            {
+              "value": "",
+              "correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "POI-10",
       "label": "Κάστρο Μήθυμνας",
       "description": "",
@@ -63,11 +126,58 @@
         "latitude": "39.36833344662295",
         "longitude": "26.17666110775892"
       },
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipOGXQr6-T-PuAK8_dkGZWzwVhWnV3jQ6z-1qcZ3=w408-h306-k-no",
+      "videoUrl": "",
       "externalLinks": [
 
       ],
       "questions": [
-
+        {
+          "id": "Q-10-01",
+          "poiId": "POI-10",
+          "label": "Το Κάστρο της Μήθυμνας είναι σε κατά σειρά μεγέθους κάστρου:",
+          "options": [
+            {
+              "value": "Πρώτο",
+              "correct": false
+            },
+            {
+              "value": "Δεύτερο",
+              "correct": true
+            },
+            {
+              "value": "Τρίτο",
+              "correct": false
+            },
+            {
+              "value": "Τετάρτο",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "Q-10-02",
+          "poiId": "POI-10",
+          "label": "Το κάστρο της Μήθυμνας αποτελείται από:",
+          "options": [
+            {
+              "value": "10 πύργους",
+              "correct": true
+            },
+            {
+              "value": "4 προπύργια",
+              "correct": false
+            },
+            {
+              "value": "3 προτειχίσματα",
+              "correct": false
+            },
+            {
+              "value": "6 κτήρια στο εσωτερικό του κάστρου",
+              "correct": false
+            }
+          ]
+        }
       ]
     },
     {
@@ -78,6 +188,8 @@
         "latitude": "39.12636971942821",
         "longitude": "26.514859314489385"
       },
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipOgf6nD_R7POZzgu5eI31q_6fVJKeVXF0qSEY8q=w426-h240-k-no",
+      "videoUrl": "",
       "externalLinks": [
         {
           "label": "Εθνικό Αρχείο Μνημείων",
@@ -85,7 +197,36 @@
         }
       ],
       "questions": [
-
+        {
+          "id": "Q-14-01",
+          "poiId": "POI-14",
+          "label": "Το Ρωμαϊκό υδραγωγείο ατασκευάσθηκε για τη μεταφορά νερού από τις πηγές του Ολύμπου μέχρι την αρχαία πόλη της Μυτιλήνης:",
+          "options": [
+            {
+              "value": "Ναι",
+              "correct": true
+            },
+            {
+              "value": "Όχι",
+              "correct": false
+            }
+          ]
+        },
+        {
+          "id": "Q-14-02",
+          "poiId": "POI-14",
+          "label": "Το πιο εντυπωσιακό τμήμα του υδραγωγείου είναι η υδατογέφυρα (τοξοστοιχία) που σώζεται στην Καλλονή:",
+          "options": [
+            {
+              "value": "Σωστό",
+              "correct": false
+            },
+            {
+              "value": "Λάθος",
+              "correct": true
+            }
+          ]
+        }
       ]
     }
   ],
@@ -136,7 +277,7 @@
         "latitude": "38.975305136171684",
         "longitude": "26.368473284737085"
       },
-      "imageUrl": "",
+      "imageUrl": "https://www.kinisip.gr/wp-content/uploads/2016/02/logo-GIANNATSIS.jpg",
       "externalLinks": [
         {
           "label": "Περισσότερα",
@@ -155,7 +296,7 @@
         "latitude": "38.97760328470837",
         "longitude": "26.395001169395393"
       },
-      "imageUrl": "",
+      "imageUrl": "https://www.greekgastronomyguide.gr/wp-content/uploads/2016/03/ouzo-pitsiladi-plomari-lesvos-DSC_5789.jpg",
       "externalLinks": [
         {
           "label": "Περισσότερα",
@@ -163,6 +304,7 @@
         }
       ],
       "questions": [
+
       ]
     },
     {
@@ -181,6 +323,7 @@
         }
       ],
       "questions": [
+
       ]
     },
     {
@@ -199,6 +342,26 @@
         }
       ],
       "questions": [
+
+      ]
+    },
+    {
+      "id": "POI-29",
+      "label": "Ποτοποιία Αρβανίτη",
+      "description": "",
+      "location": {
+        "latitude": "38.97765332775127",
+        "longitude": "26.395001169395393"
+      },
+      "imageUrl": "https://lh5.googleusercontent.com/p/AF1QipMJD3op_Wtges-aYfiZ1b_lo1dlPj6lSFofq3-x=w426-h240-k-no",
+      "externalLinks": [
+        {
+          "label": "Περισσότερα",
+          "url": "https://www.ouzoplomari.gr/el/agecheck"
+        }
+      ],
+      "questions": [
+
       ]
     }
   ]
