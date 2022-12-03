@@ -5,22 +5,29 @@ import Avatar from "./components/GUI/Avatar";
 import Navigation from "./components/Navigation";
 import useSound from "use-sound";
 import track from "./assets/audio/desert.mp3";
-import {useEffect} from "react";
+import {useState} from "react";
 
 function App() {
-  const [play] = useSound(track);
+  const [play, exposer] = useSound(track);
+  const [isPlaying, setIsPlaying] = useState(false)
 
-  useEffect(() => {
-    play()
-  }, [play])
+  const togglePlayer = () => {
+    if (isPlaying) {
+      setIsPlaying(false)
+      exposer.stop()
+    } else {
+      setIsPlaying(true)
+      play()
+    }
+  }
 
   return (
     <Box>
       <CssBaseline />
       <Box sx={{ height: "100vh", width: "100%" }}>
-        <Navigation/>
+        <Navigation togglePlayer={togglePlayer} isPlaying={isPlaying} />
         <QuestMap />
-        <Box style={{ position: "fixed", top: 20, right: 0, zIndex: 999 }}>
+        <Box style={{ position: "fixed", top: 60, right: -60, zIndex: 999 }}>
           <Avatar />
         </Box>
       </Box>
