@@ -1,0 +1,85 @@
+{
+  "pois": [
+    {
+      "id": "POI-01",
+      "label": "Απολιθωμένο Δάσος Ερεσού",
+      "description": "",
+      "location": {
+        "latitude": "39.219009677632904",
+        "longitude": "25.92212757528319"
+      },
+      "externalLinks": [
+        {
+          "label": "Εθνικό Αρχείο Μνημείων",
+          "url": "https://www.arxaiologikoktimatologio.gov.gr/el/monuments_info?id=167787&type=Space"
+        }
+      ]
+    },
+    {
+      "id": "POI-10",
+      "label": "Κάστρο Μήθυμνας",
+      "description": "",
+      "location": {
+        "latitude": "39.36833344662295",
+        "longitude": "26.17666110775892"
+      },
+      "externalLinks": [
+      ]
+    },
+    {
+      "id": "POI-14",
+      "label": "Ρωμαϊκό Υδραγωγείο Μόριας",
+      "description": "",
+      "location": {
+        "latitude": "39.12636971942821",
+        "longitude": "26.514859314489385"
+      },
+      "externalLinks": [
+        {
+          "label": "Εθνικό Αρχείο Μνημείων",
+          "url": "https://www.culture.gov.gr/el/Information/SitePages/view.aspx?nID=3696"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q-01-01",
+      "poiId": "POI-01",
+      "label": "Το απολιθωμένο Δάσος Ερεσού περικλείεται από τους οικισμούς:",
+      "options": [
+        {
+          "value": "Σίγρι, Ερεσσός, Αντίσσα",
+          "correct": true
+        },
+        {
+          "value": "Σιγρί, Ερεσσός, Χίδηρα",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "id": "Q-01-02",
+      "poiId": "POI-01",
+      "label": "Το Απολιθωμένο Δάσος της Ερεσού είναι διατηρητέο μνημείο της φύσης από το:",
+      "options": [
+        {
+          "value": "1985",
+          "correct": true
+        },
+        {
+          "value": "1986",
+          "correct": false
+        },
+        {
+          "value": "1987",
+          "correct": false
+        },
+        {
+          "value": "1988",
+          "correct": false
+        }
+      ]
+    }
+  ]
+}
