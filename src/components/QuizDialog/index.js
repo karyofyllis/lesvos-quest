@@ -133,9 +133,13 @@ export default function QuizDialog({ open, handleClose, monument }) {
         >
           {monument.label}
         </Typography>
-        <Typography sx={{ color: "#ad3c17", fontWeight: "bold", textAlign: "center" }}>
-          {`${index + 1}/${monument.questions.length}`}
-        </Typography>
+        {index < monument.questions.length -1 &&
+          <Typography
+            sx={{ color: "#ad3c17", fontWeight: "bold", textAlign: "center" }}
+          >
+            {`${index + 1}/${monument.questions.length}`}
+          </Typography>
+        }
       </Stack>
       <QuizBody
         questions={monument.questions}
