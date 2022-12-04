@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { Card, CardActionArea, Stack, Typography } from "@mui/material";
+import {Box, Card, CardActionArea, Stack, Typography} from "@mui/material";
 import PapyrosDialog from "../@core/PapyrosDialog";
 import victory from "../../assets/audio/correctSound.mp3";
 import defeat from "../../assets/audio/failSound.mp3";
@@ -32,6 +32,13 @@ function QuizBody({
             ? "Δεν κατάφερες να βρείς καμία σωστή απάντηση!"
             : `Απάντησες σωστά στις ${correctAnswers} απο τις ${questions.length} ερωτήσεις!`}
         </Typography>
+        <Box textAlign={'center'}>
+        {correctAnswers < questions.length ?
+          <img src={require('../../assets/images/defeatAsset.png')} width={300}/>
+          :
+          <img src={require('../../assets/images/winAsset.png')} width={300}/>
+        }
+        </Box>
       </Stack>
     );
   }
