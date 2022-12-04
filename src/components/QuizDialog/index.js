@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { Card, CardActionArea, Stack, Typography } from "@mui/material";
 import PapyrosDialog from "../@core/PapyrosDialog";
 import yes from "../../assets/audio/mixkit-males-yes-victory-2012.wav";
-import victory from "../../assets/audio/mixkit-animated-small-group-applause-523.wav";
-import defeat from "../../assets/audio/mixkit-crowd-disappointment-long-boo-463.wav";
+import victory from "../../assets/audio/correctSound.mp3";
+import defeat from "../../assets/audio/failSound.mp3";
 import useSound from "use-sound";
 
 function QuizBody({
@@ -73,7 +73,7 @@ function QuizBody({
   );
 }
 
-export default function QuizDialog({ open, handleClose, monument }) {
+export default function QuizDialog({ open, handleClose, monument, stopSound }) {
   const [index, setIndex] = useState(0);
   const [answered, setAnswered] = useState([]);
 
@@ -88,6 +88,7 @@ export default function QuizDialog({ open, handleClose, monument }) {
       const correctAnswers = newAnswers.filter((x) => x.correct).length;
 
       if (newAnswers.length === monument.questions.length) {
+        stopSound()
         if (correctAnswers === newAnswers.length) {
           playYes();
           playVictory();
