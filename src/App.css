@@ -1,4 +1,4 @@
-p, h1, h2, h3, h4, h5, h6 {
+* {
     font-family: "gameFont", serif;
 }
 
@@ -22,5 +22,10 @@ p, h1, h2, h3, h4, h5, h6 {
     background: -webkit-linear-gradient(354deg, rgba(107, 71, 23, 1) 0%, rgba(93, 60, 20, 1) 100%);
     background: linear-gradient(354deg, rgba(107, 71, 23, 1) 0%, rgba(93, 60, 20, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6b4717", endColorstr="#5d3c14", GradientType=1);
-    border: 4px solid #381a00;
+    border: 2px solid #896B44;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
 }

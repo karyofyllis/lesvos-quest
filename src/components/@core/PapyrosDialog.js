@@ -14,8 +14,8 @@ export default function PapyrosDialog(props) {
         rowGap={4}
         sx={{
           margin: "auto",
-          height: 650,
-          width: 650,
+          height: 800,
+          width: 800,
           backgroundImage: `url(${bg})`,
           backgroundRepeat: `no-repeat`,
           backgroundSize: "cover",
@@ -24,7 +24,7 @@ export default function PapyrosDialog(props) {
         <Typography
           className={"shadow"}
           sx={{ color: "#ad3c17", fontWeight: "bold", textAlign: "center" }}
-          variant={"h6"}
+          variant={"h3"}
         >
           {title}
         </Typography>

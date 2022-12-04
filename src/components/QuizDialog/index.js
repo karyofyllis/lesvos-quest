@@ -20,7 +20,7 @@ function QuizBody({
     return (
       <Stack rowGap={2}>
         <Typography
-          variant={"h4"}
+          variant={"h6"}
           sx={{ color: "#ad3c17", fontWeight: "bold", textAlign: "center" }}
         >
           ΑΠΟΤΕΛΕΣΜΑ
@@ -39,9 +39,6 @@ function QuizBody({
 
   return (
     <Stack rowGap={1}>
-      <Typography
-        sx={{ color: "#ad3c17", fontWeight: "bold", textAlign: "center" }}
-      >{`${index + 1}/${questions.length}`}</Typography>
       <Typography
         sx={{
           color: "#ad3c17",
@@ -123,7 +120,23 @@ export default function QuizDialog({ open, handleClose, monument }) {
   const wrongAnswers = answered.filter((x) => !x.correct).length;
 
   return (
-    <PapyrosDialog handleClose={handleClose} open={open} title={monument.label}>
+    <PapyrosDialog handleClose={handleClose} open={open} title={"Μάχη"}>
+      <Stack>
+        <Typography
+          sx={{
+            color: "#ad3c17",
+            fontWeight: "bold",
+            mb: 2,
+            textAlign: "center",
+          }}
+          variant={"h5"}
+        >
+          {monument.label}
+        </Typography>
+        <Typography sx={{ color: "#ad3c17", fontWeight: "bold", textAlign: "center" }}>
+          {`${index + 1}/${monument.questions.length}`}
+        </Typography>
+      </Stack>
       <QuizBody
         questions={monument.questions}
         index={index}
