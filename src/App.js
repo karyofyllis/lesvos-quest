@@ -14,6 +14,8 @@ function App() {
   const [play, exposer] = useSound(track);
   const [isPlaying, setIsPlaying] = useState(false)
 
+  const footerIsShown = localStorage.getItem('heroesWelcome')
+
   useEffect(() => {
     if (isPlaying) {
       play()
@@ -43,7 +45,7 @@ function App() {
           <Avatar />
         </Box>
       </Box>
-      <FooterInfo/>
+      {!footerIsShown && <FooterInfo/>}
       {/*<Snowfall style={{ zIndex: 999 }}/>*/}
     </Box>
   );

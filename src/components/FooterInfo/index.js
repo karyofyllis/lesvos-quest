@@ -1,5 +1,5 @@
 import {Box, IconButton, Stack, Typography} from "@mui/material";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Close} from "@mui/icons-material";
 // import {Animated} from "react-animated-css";
 
@@ -32,6 +32,11 @@ const FooterInfo = () =>{
   const nextHeroTalks = () =>{
     setHeroTalk((prevState)=>prevState+1)
   }
+
+  useEffect(()=> {
+    if (heroTalk >= 4)
+      localStorage.setItem('heroesWelcome','1')
+  },[heroTalk])
 
   if (heroTalk >= 4)
     return <></>
