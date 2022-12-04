@@ -1,4 +1,4 @@
-import { Card, CardActionArea, Stack, Typography } from "@mui/material";
+import {Card, CardActionArea, Divider, Stack, Typography} from "@mui/material";
 import MessageIcon from "../../assets/icons/book.png";
 import AllianceIcon from "../../assets/icons/alliance.png";
 import data from "../../data/data.json";
@@ -58,6 +58,9 @@ const OptionsMenu = () => {
             </Stack>
           </CardActionArea>
         </Card>
+        <Stack py={1}>
+          <Divider style={{ backgroundColor: "#ad3c17", height: 3 }}/>
+        </Stack>
         {data.infoMenu.map((item) => (
           <Card className={"btn"}>
             <CardActionArea sx={{ p: 1 }} onClick={() => {
