@@ -10,11 +10,12 @@ import {useEffect, useState} from "react";
 import FooterInfo from "./components/FooterInfo";
 // import Snowfall from 'react-snowfall'
 
+
 function App() {
   const [play, exposer] = useSound(track);
   const [isPlaying, setIsPlaying] = useState(false)
-
-  const footerIsShown = localStorage.getItem('heroesWelcome')
+  const welcome = localStorage.getItem('heroesWelcome')
+  const [showFooter, setShowFooter] = useState(!welcome)
 
   useEffect(() => {
     if (isPlaying) {
@@ -39,13 +40,13 @@ function App() {
         <Navigation togglePlayer={togglePlayer} isPlaying={isPlaying} />
         <QuestMap />
         <Box style={{position:'fixed',left:0,top:49,zIndex:999}}>
-          <OptionsMenu/>
+          <OptionsMenu setShowFooter={setShowFooter}/>
         </Box>
         <Box style={{ position: "fixed", top: 60, right: -60, zIndex: 999 }}>
           <Avatar />
         </Box>
       </Box>
-      {!footerIsShown && <FooterInfo/>}
+      {showFooter && <FooterInfo setShowFooter={setShowFooter} />}
       {/*<Snowfall style={{ zIndex: 999 }}/>*/}
     </Box>
   );

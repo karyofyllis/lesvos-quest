@@ -1,17 +1,14 @@
 import {
   Card,
   CardActionArea,
-  Divider,
   Stack,
   Typography,
 } from "@mui/material";
-import MessageIcon from "../../assets/icons/book.png";
-import AllianceIcon from "../../assets/icons/alliance.png";
 import data from "../../data/data.json";
 import { Fragment, useState } from "react";
 import PapyrosDialog from "../@core/PapyrosDialog";
 
-const OptionsMenu = () => {
+const OptionsMenu = ({ setShowFooter }) => {
   const [section, setSection] = useState({
     label: "",
     listItems: [],
@@ -21,6 +18,20 @@ const OptionsMenu = () => {
     },
   });
   const [openBullets, setOpenBullets] = useState(false);
+
+  const handleClick = (item) => {
+
+    if (item.id === "xp") {
+      window.open("https://lesvos.cityquest.gr/video/timelapse.mp4", "_blank")
+    } else if (item.id === "contributors") {
+      localStorage.removeItem("heroesWelcome")
+      setShowFooter(true)
+    } else {
+      setSection(item);
+      setOpenBullets(true);
+    }
+
+  }
 
   return (
     <Fragment>
@@ -34,50 +45,12 @@ const OptionsMenu = () => {
         p={2}
         spacing={1}
       >
-        <Card className={"btn"}>
-          <CardActionArea sx={{ p: 1 }}>
-            <Stack columnGap={1} direction={"row"} alignItems={"center"}>
-              <img src={MessageIcon} width={15} height={15} />
-              <Typography
-                sx={{
-                  color: "white",
-                  fontFamily: "gameFont",
-                  fontWeight: "bold",
-                }}
-                variant={"body1"}
-              >
-                Μηνύματα
-              </Typography>
-            </Stack>
-          </CardActionArea>
-        </Card>
-        <Card className={"btn"}>
-          <CardActionArea sx={{ p: 1 }}>
-            <Stack columnGap={1} direction={"row"} alignItems={"center"}>
-              <img src={AllianceIcon} width={15} height={15} />
-              <Typography
-                sx={{
-                  color: "white",
-                  fontFamily: "gameFont",
-                  fontWeight: "bold",
-                }}
-                variant={"body1"}
-              >
-                Συμμαχία
-              </Typography>
-            </Stack>
-          </CardActionArea>
-        </Card>
-        <Stack py={1}>
-          <Divider style={{ backgroundColor: "#ad3c17", height: 3 }} />
-        </Stack>
         {data.infoMenu.map((item) => (
           <Card className={"btn"}>
             <CardActionArea
               sx={{ p: 1 }}
               onClick={() => {
-                setSection(item);
-                setOpenBullets(true);
+                handleClick(item);
               }}
             >
               <Typography

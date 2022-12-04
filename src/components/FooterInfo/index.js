@@ -26,7 +26,7 @@ const Hero = ({contributor,isTalking=false,dismiss}) =>{
   </div>
 }
 
-const FooterInfo = () =>{
+const FooterInfo = ({ setShowFooter }) =>{
   const [heroTalk,setHeroTalk] = useState(0)
 
   const nextHeroTalks = () =>{
@@ -34,12 +34,13 @@ const FooterInfo = () =>{
   }
 
   useEffect(()=> {
-    if (heroTalk >= 4)
-      localStorage.setItem('heroesWelcome','1')
-  },[heroTalk])
+    if (heroTalk >= 4) {
 
-  if (heroTalk >= 4)
-    return <></>
+      localStorage.setItem("heroesWelcome", "1");
+      setShowFooter(false)
+    }
+  },[heroTalk, setShowFooter])
+  
 
   return <div style={{position:'fixed',bottom:0,left:0,minWidth:200,width:'auto',height:140,zIndex: 999,padding:10}}>
     <Stack direction={'row'} gap={1}>
