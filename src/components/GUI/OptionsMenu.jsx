@@ -1,6 +1,6 @@
 import {
   Card,
-  CardActionArea,
+  CardActionArea, Divider,
   Stack,
   Typography,
 } from "@mui/material";
@@ -45,27 +45,36 @@ const OptionsMenu = ({ setShowFooter }) => {
         p={2}
         spacing={1}
       >
-        {data.infoMenu.map((item) => (
-          <Card className={"btn"}>
-            <CardActionArea
-              sx={{ p: 1 }}
-              onClick={() => {
-                handleClick(item);
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "white",
-                  fontFamily: "gameFont",
-                  fontWeight: "bold",
+        {data.infoMenu.map((item) => {
+          if (item.divider) {
+            return (
+              <Stack px={2} py={1}>
+                <Divider sx={{ backgroundColor: "#896B44", height: 2 }}/>
+              </Stack>
+            )
+          }
+          return (
+            <Card className={"btn"}>
+              <CardActionArea
+                sx={{ p: 1 }}
+                onClick={() => {
+                  handleClick(item);
                 }}
-                variant={"body1"}
               >
-                {item.label}
-              </Typography>
-            </CardActionArea>
-          </Card>
-        ))}
+                <Typography
+                  sx={{
+                    color: "white",
+                    fontFamily: "gameFont",
+                    fontWeight: "bold",
+                  }}
+                  variant={"body1"}
+                >
+                  {item.label}
+                </Typography>
+              </CardActionArea>
+            </Card>
+          )
+        })}
       </Stack>
       <PapyrosDialog
         open={openBullets}

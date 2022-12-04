@@ -344,16 +344,6 @@
   ],
   "infoMenu": [
     {
-      "id": "xp",
-      "label": "Η Εμπειρία μας",
-      "listItems": []
-    },
-    {
-      "id": "contributors",
-      "label": "Συντελεστές",
-      "listItems": []
-    },
-    {
       "id": "S1",
       "label": "Η ιδέα",
       "listItems": [
@@ -462,6 +452,21 @@
         "WorldQuest…",
         "Sky is the limit!!!"
       ]
+    },
+    {
+      "id": "contributors",
+      "label": "Συντελεστές",
+      "divider": true
+    },
+    {
+      "id": "xp",
+      "label": "Η Εμπειρία μας",
+      "listItems": []
+    },
+    {
+      "id": "contributors",
+      "label": "Συντελεστές",
+      "listItems": []
     }
   ]
 }
