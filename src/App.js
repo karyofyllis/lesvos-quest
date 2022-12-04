@@ -7,11 +7,12 @@ import Navigation from "./components/Navigation";
 import useSound from "use-sound";
 import track from "./assets/audio/desert.mp3";
 import {useEffect, useState} from "react";
+import FooterInfo from "./components/FooterInfo";
 // import Snowfall from 'react-snowfall'
 
 function App() {
   const [play, exposer] = useSound(track);
-  const [isPlaying, setIsPlaying] = useState(true)
+  const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     if (isPlaying) {
@@ -42,6 +43,7 @@ function App() {
           <Avatar />
         </Box>
       </Box>
+      <FooterInfo/>
       {/*<Snowfall style={{ zIndex: 999 }}/>*/}
     </Box>
   );
