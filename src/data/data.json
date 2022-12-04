@@ -215,7 +215,8 @@
       "location": {
         "latitude": "40.934375617866536",
         "longitude": "24.411669692302723"
-      }
+      },
+      "linkedIn" : "https://www.linkedin.com/in/giorgos-k-4699b0108/"
     },
     {
       "label": "Βαγγέλης",
@@ -224,7 +225,8 @@
       "location": {
         "latitude": "37.44157702649632",
         "longitude": "24.913888501925747"
-      }
+      },
+      "linkedIn" : "https://www.linkedin.com/in/vangelis-nomikos-a7ab902b/"
     },
     {
       "label": "Νίκη",
@@ -233,7 +235,8 @@
       "location": {
         "latitude": "37.76176846995714",
         "longitude": "26.978775098077588"
-      }
+      },
+      "linkedIn" : "https://www.linkedin.com/in/nkyriakou/"
     },
     {
       "label": "Μάνος",
@@ -242,7 +245,8 @@
       "location": {
         "latitude": "37.144161767052104",
         "longitude": "26.848983276766916"
-      }
+      },
+      "linkedIn" : "https://www.linkedin.com/in/manolis-makris-1975b753/"
     }
   ],
   "corporations": [
