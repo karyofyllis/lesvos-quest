@@ -1,6 +1,6 @@
 import {Box, IconButton, Stack, Typography} from "@mui/material";
 import {useEffect, useState} from "react";
-import {Close} from "@mui/icons-material";
+import {Close, LinkedIn} from "@mui/icons-material";
 // import {Animated} from "react-animated-css";
 
 const data = require('../../data/data.json')
@@ -14,8 +14,13 @@ const Hero = ({contributor,isTalking=false,dismiss}) =>{
     {isTalking && (
       <Stack p={7.5} mt={-1} style={{width:440,height:265,userSelect:'none',backgroundImage:`url(${speechBubble})`,backgroundSize:'cover',marginTop:-225,marginLeft:-30,position:'absolute'}}>
         <Stack direction={'row'} alignItems={'center'} alignContent={'flex-start'} justifyContent={'space-between'}>
+          <Stack direction={'row'} alignItems={'center'}>
           <Typography fontFamily={'gameFont'} fontWeight={'bolder'} variant={'h5'}>{contributor.label}</Typography>
-          <IconButton onClick={dismiss}>
+            <IconButton href={contributor.linkedIn} target={'_blank'}>
+              <LinkedIn/>
+            </IconButton>
+          </Stack>
+            <IconButton onClick={dismiss}>
             <Close/>
           </IconButton>
         </Stack>
