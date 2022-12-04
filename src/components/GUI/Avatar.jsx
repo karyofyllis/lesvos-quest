@@ -3,7 +3,7 @@ import AvatarImage from '../../assets/images/avatar.png'
 import MapImage from '../../assets/icons/mapClosed.png'
 import NewBattleImage from '../../assets/images/newBattleButton.png'
 
-const Avatar = ({nickName='Alani39',location='Mutilini, NA',conquers=15}) => {
+const Avatar = ({nickName='Arion11',location='Mutilini, NA',conquers=15}) => {
   return <Box flex alignItems={'center'} style={{width: 250, minHeight: 300, height: 'auto'}}>
     <img src={AvatarImage} style={{borderRadius: '50%', border: '10px solid #987548', width: 180, height: 180}}
          alt={'players avatar'}/>

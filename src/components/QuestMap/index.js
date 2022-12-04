@@ -110,16 +110,10 @@ function QuestMap() {
       }
       {diamonds.map((spot) => (
         <Marker position={spot.location} icon={diamondMarker}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
         </Marker>
       ))}
       {taverns.map((spot) => (
         <Marker position={spot.location} icon={tavernMarker}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
         </Marker>
       ))}
     </MapContainer>
