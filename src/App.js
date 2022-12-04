@@ -38,7 +38,7 @@ function App() {
       <CssBaseline />
       <Box sx={{ height: "100vh", width: "100%" }}>
         <Navigation togglePlayer={togglePlayer} isPlaying={isPlaying} />
-        <QuestMap />
+        <QuestMap togglePlayer={togglePlayer} isPlaying={isPlaying} />
         <Box style={{position:'fixed',left:0,top:49,zIndex:999}}>
           <OptionsMenu setShowFooter={setShowFooter}/>
         </Box>

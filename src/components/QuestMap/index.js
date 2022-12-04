@@ -7,6 +7,8 @@ import {Fragment, useState} from "react";
 import QuizDialog from "../QuizDialog";
 import CorporationPopup from "../CorporationPopup";
 import ContributorPopup from "../ContributorPopup";
+import useSound from "use-sound";
+import track from "../../assets/audio/challengeSound.mp3";
 
 const defaultMarker = new L.icon({
   iconUrl: require("../../assets/building.png"),
@@ -55,14 +57,25 @@ const taverns = [
   },
 ]
 
-function QuestMap() {
+function QuestMap({ isPlaying, togglePlayer }) {
 
   const [openQuiz, setOpenQuiz] = useState(false)
   const [monument, setMonument] = useState({
     questions: []
   })
 
+  const [play, exposer] = useSound(track);
+
+  const handleCloseBattle = () => {
+    setOpenQuiz(false)
+    exposer.stop()
+  }
+
   const handleBattle = (monument) => {
+    if (isPlaying) {
+      togglePlayer()
+    }
+    play()
     setOpenQuiz(true)
     setMonument(monument)
   }
@@ -117,7 +130,7 @@ function QuestMap() {
         </Marker>
       ))}
     </MapContainer>
-      <QuizDialog open={openQuiz} handleClose={() => setOpenQuiz(false)} monument={monument} />
+      <QuizDialog stopSound={exposer.stop} open={openQuiz} handleClose={handleCloseBattle} monument={monument} />
     </Fragment>
   );
 }
