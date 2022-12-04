@@ -19,7 +19,7 @@
 
 ## Συντελεστές
 - Βαγγέλης Νομικός ([LinkedIn](https://www.linkedin.com/in/vangelis-nomikos-a7ab902b/)) - ([GitHub](https://github.com/nvangelis))
-- Γιώργος Καριοφύλλης ([LinkedIn](https://www.linkedin.com/in/giorgos-k-4699b0108/)) - ([GitHub](https://github.com/karyofyllis))
+- Γιώργος Καρυοφύλλης ([LinkedIn](https://www.linkedin.com/in/giorgos-k-4699b0108/)) - ([GitHub](https://github.com/karyofyllis))
 - Μανόλης Μακρής ([LinkedIn](https://www.linkedin.com/in/manolis-makris-1975b753/)) - ([GitHub](https://github.com/emmakris))
 - Νίκη Κυριακού ([LinkedIn](https://www.linkedin.com/in/nkyriakou/))
 
