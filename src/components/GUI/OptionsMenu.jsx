@@ -1,4 +1,10 @@
-import {Card, CardActionArea, Divider, Stack, Typography} from "@mui/material";
+import {
+  Card,
+  CardActionArea,
+  Divider,
+  Stack,
+  Typography,
+} from "@mui/material";
 import MessageIcon from "../../assets/icons/book.png";
 import AllianceIcon from "../../assets/icons/alliance.png";
 import data from "../../data/data.json";
@@ -9,6 +15,10 @@ const OptionsMenu = () => {
   const [section, setSection] = useState({
     label: "",
     listItems: [],
+    image: {
+      url: "",
+      name: "",
+    },
   });
   const [openBullets, setOpenBullets] = useState(false);
 
@@ -59,14 +69,17 @@ const OptionsMenu = () => {
           </CardActionArea>
         </Card>
         <Stack py={1}>
-          <Divider style={{ backgroundColor: "#ad3c17", height: 3 }}/>
+          <Divider style={{ backgroundColor: "#ad3c17", height: 3 }} />
         </Stack>
         {data.infoMenu.map((item) => (
           <Card className={"btn"}>
-            <CardActionArea sx={{ p: 1 }} onClick={() => {
-              setSection(item)
-              setOpenBullets(true)
-            }}>
+            <CardActionArea
+              sx={{ p: 1 }}
+              onClick={() => {
+                setSection(item);
+                setOpenBullets(true);
+              }}
+            >
               <Typography
                 sx={{
                   color: "white",
@@ -86,18 +99,38 @@ const OptionsMenu = () => {
         handleClose={() => setOpenBullets(false)}
         title={section.label}
       >
-        {
-          <ul style={{ height: 500, overflow: "auto"}}>
-            {section.listItems.map((item) => (
-              <li>
-                <Typography sx={{ fontFamily: "gameFont", fontSize: 32 }}>{item}</Typography>
-              </li>
-            ))}
-          </ul>
-        }
+        <Stack direction={"column"} style={{ height: 500, overflow: "auto" }}>
+          {
+            <ul>
+              {section.listItems.map((item) => (
+                <li>
+                  <Typography sx={{ fontFamily: "gameFont", fontSize: 32 }}>
+                    {item}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
+          }
+          {section.image && section.image.url && (
+            <a
+              href={section.image.url}
+              target={"_blank"}
+              style={{ alignSelf: "center" }}
+            >
+              <img width={400} src={section.image.url} />
+            </a>
+          )}
+          {section.image && section.image.name && (
+            <img
+              style={{ alignSelf: "center" }}
+              width={400}
+              src={require("../../assets/images/" + section.image.name)}
+            />
+          )}
+        </Stack>
       </PapyrosDialog>
     </Fragment>
   );
 };
 
-export default OptionsMenu
+export default OptionsMenu;
