@@ -92,29 +92,6 @@
               "correct": false
             }
           ]
-        },
-        {
-          "id": "Q-06-02",
-          "poiId": "POI-06",
-          "label": "",
-          "options": [
-            {
-              "value": "",
-              "correct": true
-            },
-            {
-              "value": "",
-              "correct": false
-            },
-            {
-              "value": "",
-              "correct": false
-            },
-            {
-              "value": "",
-              "correct": false
-            }
-          ]
         }
       ]
     },
