@@ -16,6 +16,7 @@
 ## Πηγές Πολιτιστικών Δεδομένων
 - [Εθνικό Αρχείο Μνημείων](https://www.arxaiologikoktimatologio.gov.gr/)
 - [Δήμος Δυτικής Λέσβου](https://www.mwlesvos.gr/)
+- Αποθετήρια Δεδομένων ([Repox Store](https://repox.io/))
 
 ## Συντελεστές
 - Βαγγέλης Νομικός ([LinkedIn](https://www.linkedin.com/in/vangelis-nomikos-a7ab902b/)) - ([GitHub](https://github.com/nvangelis))
