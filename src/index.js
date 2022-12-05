@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from 'react-ga4';
+const TRACKING_ID = "G-6CM79VBLV5";
+
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send({ hitType: "pageview", page: window.location.pathname + window.location.search});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
